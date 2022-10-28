@@ -20,10 +20,10 @@ function Navbar(){
           <Link to="course-home"><button className="block py-2 pr-4 pl-3 text-white font-bold italic rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">CURSOS</button></Link>
         </li>
         <li>
-          <a href="#" className="block py-2 pr-4 pl-3 text-white font-bold italic rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">PROFESORES</a>
+          <Link to="teacher-home"><button className="block py-2 pr-4 pl-3 text-white font-bold italic rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">PROFESORES</button></Link>
         </li>
         <li>
-          <a href="#" className="block py-2 pr-4 pl-3 text-white font-bold italic rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">ESTUDIANTES</a>
+          <Link to="student-home"><button href="#" className="block py-2 pr-4 pl-3 text-white font-bold italic rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">ESTUDIANTES</button></Link>
         </li>
        
       </ul>

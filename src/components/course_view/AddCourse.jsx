@@ -106,7 +106,7 @@ function AddCourse (){
                     
                 </div> 
             </div>
-             <Link to="/admin-panel/course-home"><button className="bg-white hover:bg-red-500 font-bold py-2 px-4 border border-black rounded mb-3" >Volver</button></Link>
+             <Link to="/admin-panel/course-home"><button className="bg-white hover:bg-red-500 hover:text-white font-bold py-2 px-4 border border-black rounded mb-3 mt-3" >Volver</button></Link>
          </div>     
      </div>
  </div>

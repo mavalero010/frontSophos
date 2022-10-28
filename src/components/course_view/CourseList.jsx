@@ -1,15 +1,12 @@
 
 import axios from 'axios'
 import { useEffect, useState } from 'react';
-
-import {Link } from "react-router-dom"
-import Navbar from '../Navbar';
 function CourseList(params) {
-    <Navbar/>
     const api= import.meta.env.VITE_API_URL    
+    const nit=10000
     const [courses,setCourses]=useState({})
     useEffect(function () {
-        axios.get(`${api}cursos/10000/`)
+        axios.get(`${api}cursos/${nit}/`)
             .then((response)=> {
                 
                 setCourses(response.data)

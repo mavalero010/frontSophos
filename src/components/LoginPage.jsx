@@ -1,12 +1,25 @@
 
-import { useState } from "react";
 import { Link,useNavigate} from "react-router-dom"
-
+import axios from 'axios'
+import { useEffect, useState } from 'react';
 function LoginPage(){
-    
+
+    const api=import.meta.env.VITE_API_URL    
     const [nit,setNit]=useState("");
     const navigate=useNavigate()
-
+    let res=false
+    axios.get(`${api}encontrar_universidad/${nit}/`)
+    .then((response)=> {
+        console.log("RESPONSE: ",response.data)
+        if(!response.data){
+            console.log("UNIVERSIDAD NO ENCONTRADA")
+            return
+        }else{
+            res=true
+        }
+    }).catch(function (error) {
+        console.log(error);
+        })
     return(   
         
     <div className="h-screen">
@@ -33,8 +46,13 @@ function LoginPage(){
                         if(!nit){
                             alert("INGRESE UN NIT VALIDO")
                             return
+                        }else{
+                            if(res==false){
+                                alert("UNIVERSIDAD NO ENCONTRADA")
+                                return
+                            }
                         }
-
+ 
                         navigate("/admin-panel")
                         
 
