@@ -9,10 +9,12 @@ function TeacherHome(){
        <div className="bg-white mt-10 py-6 px-4  border-black">
            <div className="h-100 bg-[#737373] rounded-t-md border-2 border-black pt-10 pb-10 px-5">
 
-               <Link to="add-teacher">{ButtonTeacher("AÑADIR PROFESOR",'/images/SignoMas.png')}</Link>
+           <Link to="add-teacher">{ButtonTeacher("AÑADIR PROFESOR",'/images/SignoMas.png')}</Link>
                <Link to="find-teacher-by-id">{ButtonTeacher("BUSCAR POR ID",'/images/LupaNumeral.png')}</Link>
-               {ButtonTeacher("BUSCAR POR NOMBRE",'/images/LupaA.png')}
-               {/*ButtonTeacher("CURSOS DISPONIBLES",'/images/Numeral.png')*/}
+               <Link to="find-teacher-by-name">{ButtonTeacher("BUSCAR POR NOMBRE",'/images/LupaA.png')}</Link>
+                <Link to="deactivate-teacher">{ButtonTeacher("DESACTIVAR PROFESOR",'/images/Equis.png')}</Link>
+                <Link to="activate-teacher">{ButtonTeacher("ACTIVAR PROFESOR",'/images/Check.png')}</Link>
+                
                <div className="bg-white rounded-md border-2 border-black mt-20 flex flex-row flex-wrap">
                  <TeacherList/>
                    

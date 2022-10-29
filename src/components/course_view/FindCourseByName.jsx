@@ -1,9 +1,9 @@
 //ENCONTRAR CURSO POR NOMBRE
-function FindCourseByName(){
+
+import Course from './Course';
+function FindCourseByName(props){
     return(
-        <div>
-            FindCourseByName
-        </div>
+        <Course url={`${props.url}${props.nit}`} nombre={props.nombre} placeholder={props.placeholder} alert={props.alert}/>
     )
 }
 

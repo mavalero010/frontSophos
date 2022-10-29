@@ -10,9 +10,11 @@ function StudentHome(){
        <div className="bg-white mt-10 py-6 px-4  border-black">
            <div className="h-100 bg-[#737373] rounded-t-md border-2 border-black pt-10 pb-10 px-5">
 
-               <Link to="add-student">{ButtonStudent("AÑADIR PROFESOR",'/images/SignoMas.png')}</Link>
+               <Link to="add-student">{ButtonStudent("AÑADIR ESTUDIANTE",'/images/SignoMas.png')}</Link>
                <Link to="find-student-by-id">{ButtonStudent("BUSCAR POR ID",'/images/LupaNumeral.png')}</Link>
-               {ButtonStudent("BUSCAR POR NOMBRE",'/images/LupaA.png')}
+               <Link to="find-student-by-name">{ButtonStudent("BUSCAR POR NOMBRE",'/images/LupaA.png')}</Link>
+                <Link to="deactivate-student">{ButtonStudent("DESACTIVAR ESTUDIANTE",'/images/Equis.png')}</Link>
+                <Link to="activate-student">{ButtonStudent("ACTIVAR ESTUDIANTE",'/images/Check.png')}</Link>
                {/*ButtonTeacher("CURSOS DISPONIBLES",'/images/Numeral.png')*/}
                <div className="bg-white rounded-md border-2 border-black mt-20 flex flex-row flex-wrap">
                  <StudentList/>

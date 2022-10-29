@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { useState } from "react";
 import axios from 'axios'
-function AddCourse (){
+function AddCourse (props){
 
    const api= import.meta.env.VITE_API_URL 
    const [idcurso,setIdCurso]=useState("");
@@ -12,7 +12,6 @@ function AddCourse (){
    const [idprereq,setIdPrereq]=useState("");
    const [idprofesor,setIdProf]=useState("");
 
-   const navigate=useNavigate()
     return(
       <div className="text-black text-bold italic text-center pt-10"> 
         
@@ -78,13 +77,13 @@ function AddCourse (){
                               alert("DIGITE TODOS LOS CAMPOS")
                               return
                            }
-                           axios.post('http://localhost:8080/agregar_curso/', {
+                           axios.post(props.api, {
                               "id": idcurso,
                               "nombre_materia": materia,
                               "id_curso_prerrequisito": idprereq,
                               "num_creditos": num_creditos,
                               "cupos": cupos,
-                              "nit":10000,
+                              "nit":props.nit,
                               "activo":true,
                               "no_curso": nrc,
                               "id_profesor":idprofesor
