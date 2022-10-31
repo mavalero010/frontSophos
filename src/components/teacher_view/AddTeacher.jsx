@@ -21,7 +21,7 @@ function AddTeacher(props){
            <div className="h-100 bg-[#737373] rounded-t-md border-2 border-black pt-10 pb-10 px-5">
               <div>
                  
-                 <label className="font-extrabold italic text-white text-7xl">AÑADIR CURSO</label>
+                 <label className="font-extrabold italic text-white text-7xl">AÑADIR PROFESOR</label>
                  <div className="h-100 bg-[#D9D9D9] rounded-md border-2 border-black mt-20 mx-96 items">
                     <form>
                        <ul>
@@ -64,7 +64,7 @@ function AddTeacher(props){
                              onChange={( event )=>{setEmail(event.target.value);}}
                              />
                           </li>
-                          <li className="mb-3">
+                          <li >
                              <input className="mx-6 mt-3 rounded-md border-black border-2 placeholder:text-[#737373] text-center"  placeholder="DIRECCION" id="direccion"
                              onChange={( event )=>{setDirection(event.target.value);}}
                              /></li >

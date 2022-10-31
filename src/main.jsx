@@ -67,7 +67,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
     <Route path="/admin-panel/student-home" element={<StudentHome/>}></Route>
     <Route path="/admin-panel/student-home/activate-student" element={<ActivateStudent/>}></Route>
-    <Route path="/admin-panel/student-home/add-student" element={<AddStudent/>}></Route>
+    <Route path="/admin-panel/student-home/add-student" element={<AddStudent nit={nit}  url={`${api}agregar_estudiante/`}/>}></Route>
     <Route path="/admin-panel/student-home/deactivate-student" element={<DeactivateStudent/>}></Route> 
     <Route path="/admin-panel/student-home/find-student-by-id" element={<FindStudentByID/>}></Route>
     <Route path="/admin-panel/student-home/find-student-by-name" element={<FindStudentByName/>}></Route>
