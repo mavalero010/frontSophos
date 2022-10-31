@@ -15,6 +15,7 @@ function StudentHome(){
                <Link to="find-student-by-name">{ButtonStudent("BUSCAR POR NOMBRE",'/images/LupaA.png')}</Link>
                 <Link to="deactivate-student">{ButtonStudent("DESACTIVAR ESTUDIANTE",'/images/Equis.png')}</Link>
                 <Link to="activate-student">{ButtonStudent("ACTIVAR ESTUDIANTE",'/images/Check.png')}</Link>
+                <Link to="register-student">{ButtonStudent("MATRICULAR CURSO",'/images/Libro.png')}</Link>
                {/*ButtonTeacher("CURSOS DISPONIBLES",'/images/Numeral.png')*/}
                <div className="bg-white rounded-md border-2 border-black mt-20 flex flex-row flex-wrap">
                  <StudentList/>

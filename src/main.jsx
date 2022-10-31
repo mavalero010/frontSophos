@@ -29,6 +29,7 @@ import AddStudent from './components/student_view/AddStudent'
 import DeactivateStudent from './components/student_view/DeactivateStudent'
 import FindStudentByID from './components/student_view/FindStudentByID'
 import FindStudentByName from './components/student_view/FindStudentByName'
+import Registered from './components/student_view/Registered'
 
 const api= import.meta.env.VITE_API_URL 
 const nit=10000
@@ -49,7 +50,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Route path="/admin-panel/course-home/find-course-by-nrc" element={<FindCourseByNRC url={`${api}encontrar_curso/`} nit={nit} nombre="ENCONTRAR CURSO POR NRC" placeholder="NRC CURSO" alert="NRC"/>}></Route>
     <Route path="/admin-panel/course-home/approved-courses-by-student" element={<ApprovedCoursesByStudent url={`${api}cursos_aprobados_estudiante/`} nit={nit} nombre="ENCONTRAR APROBADOS CURSOS DE ESTUDIANTE" placeholder="ID ESTUDIANTE" alert="ID ESTUDIANTE"/>}></Route>
     <Route path="/admin-panel/course-home/approve-course" element={<ApproveCourse url={`${api}aprobar_curso/`} nit={nit} nombre="APROBAR CURSO A ESTUDIANTE" phstudent="ID ESTUDIANTE" phcourse="ID CURSO" alert="campos correctamente"/>}></Route>
-    <Route path="/admin-panel/course-home/available-courses" element={<AvailableCourses url={`${api}filtrar_cursos_por_cupos/`} nit={nit} nombre="ENCONTRAR APROBADOS CURSOS DE ESTUDIANTE" placeholder="ID ESTUDIANTE" alert="ID ESTUDIANTE"/>}></Route>
+    <Route path="/admin-panel/course-home/available-courses" element={<AvailableCourses url={`${api}filtrar_cursos_por_cupos/`} nit={nit} nombre="ENCONTRAR APROBADOS CURSOS DE ESTUDIANTE" placeholder="ID CURSO" alert="ID ESTUDIANTE"/>}></Route>
     <Route path="/admin-panel/course-home/checking-course" element={<CheckingCourse url={`${api}cursar_curso/`} nit={nit}/>}></Route>
     <Route path="/admin-panel/course-home/find-course-by-name" element={<FindCourseByName url={`${api}encontrar_curso_por_nombre/`} nit={nit} nombre="ENCONTRAR CURSO POR NOMBRE" placeholder="NOMBRE CURSO" alert="NOMBRE"/>}></Route>
     <Route path="/admin-panel/course-home/registered-course-by-student" element={<RegisteredCourseByStudent url={`${api}cursos_matriculados_estudiante/`} nit={nit} variable="ID ESTUDIANTE" nombre="CURSOS MATRICULADOS DE ESTUDIANTE" alert="ID ESTUDIANTE" placeholder="ID ESTUDIANTE"/>}></Route>
@@ -70,6 +71,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Route path="/admin-panel/student-home/deactivate-student" element={<DeactivateStudent/>}></Route> 
     <Route path="/admin-panel/student-home/find-student-by-id" element={<FindStudentByID/>}></Route>
     <Route path="/admin-panel/student-home/find-student-by-name" element={<FindStudentByName/>}></Route>
+    <Route path="/admin-panel/student-home/register-student" element={<Registered url={`${api}matricula/`} nit={nit} phstudent="ID ESTUDIANTE" phcourse="NRC COURSE" phteacher="ID TEACHER"/>}></Route>
   </Routes>
 </BrowserRouter>
 )
