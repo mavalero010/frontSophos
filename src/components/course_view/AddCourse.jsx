@@ -89,7 +89,7 @@ function AddCourse (props){
                               "id_profesor":idprofesor
                             })
                             .then(function (response) {
-                              alert(response);
+                              alert("Curso registrado");
                             })
                             .catch(function (error) {
                               console.log(error);

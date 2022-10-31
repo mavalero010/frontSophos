@@ -3,11 +3,11 @@ import {Link } from "react-router-dom"
 function Navbar(){
     return (
         
-<nav className="bg-white border-black border-2 px-2 sm:px-4 py-2.5 rounded dark:bg-[#737373]">
+<nav className="bg-black border-black border-2 px-2 sm:px-4 py-2.5 rounded dark:bg-[#FF8836]">
   <div className="container flex flex-wrap justify-between items-center mx-auto">
     <a >
         
-        <span className="self-center text-xl font-bold italic whitespace-nowrap dark:text-white">UNIVERSIDAD SOPHOS SOLUTIONS</span>
+        <span className="self-center text-xl font-bold italic whitespace-nowrap dark:text-black">UNIVERSIDAD SOPHOS SOLUTIONS</span>
     </a>
     <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
       <span className="sr-only">Open main menu</span>

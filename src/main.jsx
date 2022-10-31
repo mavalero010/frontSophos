@@ -58,7 +58,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
     <Route path="/admin-panel/teacher-home" element={<TeacherHome/>}></Route>
     <Route path="/admin-panel/teacher-home/activate-teacher" element={<ActivateTeacher/>}></Route>
-    <Route path="/admin-panel/teacher-home/add-teacher" element={<AddTeacher/>}></Route>
+    <Route path="/admin-panel/teacher-home/add-teacher" element={<AddTeacher nit={nit}  url={`${api}agregar_profesor/`}/>}></Route>
     <Route path="/admin-panel/teacher-home/deactivate-teacher" element={<DeactivateTeacher/>}></Route>
     <Route path="/admin-panel/teacher-home/deactivate-teacher" element={<DeactivateTeacher/>}></Route>
     <Route path="/admin-panel/teacher-home/find-teacher-by-id" element={<FindTeacherByID/>}></Route>

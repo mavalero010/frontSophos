@@ -13,15 +13,18 @@ function AdminPanel(props){
     console.log(error);
     })
     return(
-        <div className="text-black mx-auto">
-        <NavBar/>
-    <form className="mx-auto ">
-        <ul className="text-white text-3xl italic mx-auto">{universidad.nombre}</ul>   
-        <ul className="text-white text-3xl italic">{universidad.nit}</ul>   
+        <div>
+            <NavBar/>
+    <div className="text-black h-screen flex flex-col  justify-center items-center bg-white">
+        
+    <div className="container h-full flex flex-col justify-center items-center bg-[#737373] my-20 border-4 border-black">
+        <ul className="text-white text-3xl italic">{universidad.nombre}</ul>   
+        <ul className="text-white text-3xl italic">NIT: {universidad.nit}</ul>   
         <ul className="text-white text-3xl italic">{universidad.ciudad}</ul>   
         <ul className="text-white text-3xl italic">{universidad.pais}</ul>    
-    </form>
     </div>
+    </div>
+        </div>
     )
 }
 
