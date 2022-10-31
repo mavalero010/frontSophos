@@ -3,7 +3,6 @@ import { useState } from "react";
 import axios from 'axios'
 function AddCourse (props){
 
-   const api= import.meta.env.VITE_API_URL 
    const [idcurso,setIdCurso]=useState("");
    const [num_creditos,setNumCreditos]=useState("");
    const [cupos,setCupos]=useState("");
@@ -77,7 +76,7 @@ function AddCourse (props){
                               alert("DIGITE TODOS LOS CAMPOS")
                               return
                            }
-                           axios.post(props.api, {
+                           axios.post(props.url, {
                               "id": idcurso,
                               "nombre_materia": materia,
                               "id_curso_prerrequisito": idprereq,
