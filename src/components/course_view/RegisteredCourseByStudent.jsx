@@ -41,7 +41,6 @@ function RegisteredCourseByStudent(props){
                                             {console.log("RESPONSE: ",response.data)}
                                             setRes(response.data)
                                             if(!Object.keys(res).length){
-                                                alert("Estudiante no existe")
                                                 return (   
                                                     <div className=" my-3 mx-4 w-44 bg-[#D9D9D9] items-center justify-center border-2 border-black font-bold italic text-black text-md">
             

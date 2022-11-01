@@ -4,14 +4,19 @@ import { useEffect, useState } from 'react';
 import axios from 'axios'
 function AdminPanel(props){
     const [universidad,setUniversidad]=useState({}); 
-    axios.get(`${props.url}${props.nit}/`)
-    .then(function (response) {
-        setUniversidad(response.data)
-        return
-    })
-    .catch(function (error) {
-    console.log(error);
-    })
+
+    useEffect(function () {
+        axios.get(`${props.url}${props.nit}/`)
+        .then(function (response) {
+            setUniversidad(response.data)
+            return
+        })
+        .catch(function (error) {
+        console.log(error);
+        })
+        
+    }, [])
+
     return(
         <div>
             <NavBar/>

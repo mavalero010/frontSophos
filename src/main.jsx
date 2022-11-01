@@ -61,16 +61,16 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Route path="/admin-panel/teacher-home/add-teacher" element={<AddTeacher nit={nit}  url={`${api}agregar_profesor/`}/>}></Route>
     <Route path="/admin-panel/teacher-home/deactivate-teacher" element={<DeactivateTeacher/>}></Route>
     <Route path="/admin-panel/teacher-home/deactivate-teacher" element={<DeactivateTeacher/>}></Route>
-    <Route path="/admin-panel/teacher-home/find-teacher-by-id" element={<FindTeacherByID/>}></Route>
-    <Route path="/admin-panel/teacher-home/find-teacher-by-name" element={<FindTeacherByName/>}></Route>
+    <Route path="/admin-panel/teacher-home/find-teacher-by-id" element={<FindTeacherByID url={`${api}encontrar_profesor/`} alert="PROFESOR" nombre="ENCONTRAR PROFESOR POR ID" nit={nit}/>}></Route>
+    <Route path="/admin-panel/teacher-home/find-teacher-by-name" element={<FindTeacherByName url={`${api}encontrar_profesor_por_nombre/`} alert="PROFESOR" nombre="ENCONTRAR PROFESOR POR ID" nit={nit}/>}></Route>
 
 
     <Route path="/admin-panel/student-home" element={<StudentHome/>}></Route>
     <Route path="/admin-panel/student-home/activate-student" element={<ActivateStudent/>}></Route>
     <Route path="/admin-panel/student-home/add-student" element={<AddStudent nit={nit}  url={`${api}agregar_estudiante/`}/>}></Route>
     <Route path="/admin-panel/student-home/deactivate-student" element={<DeactivateStudent/>}></Route> 
-    <Route path="/admin-panel/student-home/find-student-by-id" element={<FindStudentByID/>}></Route>
-    <Route path="/admin-panel/student-home/find-student-by-name" element={<FindStudentByName/>}></Route>
+    <Route path="/admin-panel/student-home/find-student-by-id" element={<FindStudentByID url={`${api}encontrar_estudiante/`} alert="ESTUDIANTE" nombre="ENCONTRAR ESTUDIANTE POR NOMBRE" nit={nit}/>}></Route>
+    <Route path="/admin-panel/student-home/find-student-by-name" element={<FindStudentByName  url={`${api}encontrar_estudiante_por_nombre/`} alert="ESTUDIANTE" nombre="ENCONTRAR ESTUDIANTE POR ID" nit={nit}/>}></Route>
     <Route path="/admin-panel/student-home/register-student" element={<Registered url={`${api}matricula/`} nit={nit} phstudent="ID ESTUDIANTE" phcourse="NRC COURSE" phteacher="ID TEACHER"/>}></Route>
   </Routes>
 </BrowserRouter>
